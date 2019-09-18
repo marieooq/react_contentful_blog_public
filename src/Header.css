@@ -1,0 +1,45 @@
+#header {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+}
+
+#logo {
+  width: 100px;
+}
+
+/*フォーム全体*/
+#header > form#form1 {
+  position: relative;
+  max-width: 270px;
+  margin-bottom: 15px;
+}
+
+/*検索ボックス*/
+#header > form#form1 > input#sbox1 {
+  position: absolute; /*フォームの絶対位置*/
+  left: 0;
+  top: 0;
+  outline: 0; /*クリック時の青い枠線消す*/
+  width: 300px;
+  height: 50px; /*検索ボックスの高さ */
+  padding: 0 10px; /*テキスト位置調整*/
+  border-radius: 2px 0 0 2px; /*検索ボックスの角を丸める*/
+  background: #eee; /*検索ボックスの背景カラー*/
+  font-size: 1.2em;
+}
+
+/*検索ボタン*/
+#sbtn1 {
+  width: 70px; /*検索ボタンの横幅*/
+  height: 50px; /*検索ボタンの縦幅*/
+  position: absolute; /*検索ボタンの絶対位置*/
+  left: 270px; /*検索ボタンの位置調整*/
+  top: 0;
+  border-radius: 0 2px 2px 0; /*検索ボタンの角を丸める*/
+  background: #7fbfff; /*検索ボタンの背景カラー*/
+  border: none; /*検索ボタンの枠線を消す*/
+  color: #fff; /*検索ボタンのテキストカラー*/
+  font-weight: bold; /*検索ボタンのテキスト太字*/
+  font-size: 16px; /*検索ボタンのフォントサイズ*/
+}
