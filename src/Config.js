@@ -1,5 +1,3 @@
-import React from "react";
-
 const Config = {
   contentful: {
     space: "79vndjll5vfu",

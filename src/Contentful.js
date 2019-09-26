@@ -1,4 +1,3 @@
-import React from "react";
 import * as contentful from "contentful";
 import Config from "./Config";
 
@@ -12,7 +11,7 @@ const Contentful = (skip, data) => {
         order: "sys.createdAt",
         content_type: data,
         //the number of contents for each page
-        limit: 4
+        limit: 10
       })
       .then(entries => {
         resolve(entries);

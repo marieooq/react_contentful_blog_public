@@ -6,7 +6,7 @@ class Header extends React.Component {
   render() {
     return (
       <div id="header">
-        <img src={logo} alt="logo image" id="logo"></img>
+        <img src={logo} alt="logo" id="logo"></img>
         <form id="form1" action="https://vanstudents.com" method="get">
           <input
             id="sbox1"

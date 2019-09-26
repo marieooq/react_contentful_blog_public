@@ -1,0 +1,24 @@
+.article {
+  display: flex;
+  width: 50%;
+  height: 400px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #ccc;
+  align-items: center;
+}
+.thumbnails img {
+  display: block;
+  width: 400px;
+}
+
+.titles {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.description {
+  /* background-color: aquamarine; */
+  /* height: 300px; */
+  overflow: hidden;
+}
