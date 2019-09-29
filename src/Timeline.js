@@ -3,7 +3,6 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import Contentful from "./Contentful";
 import "./Timeline.css";
-// import { Link } from "react-router-dom";
 
 class Timeline extends React.Component {
   state = {
@@ -75,7 +74,7 @@ class Timeline extends React.Component {
       );
     });
 
-    return <div>{list}</div>;
+    return <div className="article-container">{list}</div>;
   }
 }
 

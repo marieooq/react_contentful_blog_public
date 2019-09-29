@@ -3,12 +3,16 @@ import React from "react";
 import "./App.css";
 import Timeline from "./Timeline";
 import Header from "./Header";
+import Aside from "./Aside";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Timeline />
+      <div className="container">
+        <Timeline />
+        <Aside />
+      </div>
     </div>
   );
 }

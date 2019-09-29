@@ -1,11 +1,15 @@
+.article-container {
+  width: 70%;
+  box-sizing: border-box;
+}
 .article {
   display: flex;
-  width: 50%;
   height: 400px;
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px #ccc;
   align-items: center;
+  margin: 30px 0;
 }
 .thumbnails img {
   display: block;

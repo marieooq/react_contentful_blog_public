@@ -1,0 +1,19 @@
+.aside {
+  width: 30%;
+  box-sizing: border-box;
+}
+
+.profile {
+  width: 200px;
+  margin: 30px auto;
+}
+
+.profile img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.profile-description {
+  font-size: 0.9em;
+  margin: 15px auto;
+}
