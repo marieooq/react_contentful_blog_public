@@ -11,7 +11,7 @@ class Timeline extends React.Component {
 
   getDataFromContentful = async () => {
     const response = await Contentful();
-    console.log(response);
+    // console.log(response);
     this.setState({
       arrayData: response.items
     });
@@ -23,7 +23,7 @@ class Timeline extends React.Component {
 
   render() {
     const list = this.state.arrayData.map(data => {
-      console.log("length of body is below.");
+      // console.log("length of body is below.");
 
       const returnImageURI = () => {
         if (data.fields.heroImage !== undefined) {
@@ -43,17 +43,24 @@ class Timeline extends React.Component {
           const bodyContent = data.fields.body;
           const bodyLength = bodyContent.length;
 
-          console.log(bodyLength);
+          // console.log(bodyLength);
 
           if (bodyLength > cutPoint) {
             const tContent = bodyContent.substring(0, cutPoint) + "...";
-            console.log(tContent);
+            // console.log(tContent);
             return tContent;
           } else {
             return bodyContent;
           }
         }
       };
+
+      const returnTag = () => {
+        // console.log(`Inside returnTag data is`);
+        // console.log(data.fields.tags);
+      };
+
+      returnTag();
 
       return (
         <div className="article">
