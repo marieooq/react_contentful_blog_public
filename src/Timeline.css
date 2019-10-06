@@ -8,16 +8,18 @@
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px #ccc;
+  box-sizing: border-box;
   align-items: center;
   margin: 30px 0;
 }
 .thumbnails img {
   display: block;
   width: 400px;
+  margin: 30px;
 }
 
 .descriptionArea {
-  padding: 30px;
+  margin: 30px;
 }
 
 .titles {
