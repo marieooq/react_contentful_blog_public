@@ -55,19 +55,11 @@ class Timeline extends React.Component {
         }
       };
 
-      const returnTag = () => {
-        // console.log(`Inside returnTag data is`);
-        // console.log(data.fields.tags);
-      };
-
-      returnTag();
-
       return (
         <div className="article">
           <div className="imageArea">{returnImageURI()}</div>
           <div className="descriptionArea">
             <div className="titles">{data.fields.title}</div>
-            {/* <div className="description">{data.fields.description}</div> */}
             <ReactMarkdown className="description" source={truncateBody()} />
             <a
               href="https://marieotaki.com"

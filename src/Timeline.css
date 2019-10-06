@@ -16,6 +16,10 @@
   width: 400px;
 }
 
+.descriptionArea {
+  padding: 30px;
+}
+
 .titles {
   font-size: 1.2em;
   font-weight: 700;

@@ -5,7 +5,8 @@ import "./Aside.css";
 
 class Aside extends React.Component {
   state = {
-    arrayData: []
+    arrayData: [],
+    recommendId: "5yUivRoyfq5WNbDpgwd6Ew"
   };
 
   getDataFromContentful = async () => {
@@ -35,19 +36,40 @@ class Aside extends React.Component {
       return <li>{data}</li>;
     });
 
+    const recommendImg = this.state.arrayData.map(data => {
+      if (
+        data.fields.heroImage !== undefined &&
+        data.sys.id === this.state.recommendId
+      ) {
+        const imgURL = data.fields.heroImage.fields.file.url;
+        console.log(data.sys.id);
+        console.log("This is inside recommendImg");
+        console.log(imgURL);
+        return imgURL;
+      }
+    });
+
+    console.log(recommendImg);
+
     return (
       <div className="aside">
-        <div className="profile">
-          <img src={logo} alt="profile"></img>
-          <div className="profile-description">
-            新卒で日系SIerに就職。スタートアップの営業を経た後、独学でWebデザインを勉強。現在バンクーバーにてフロントエンドデベロッパーとして就職するべく奮闘中。バンクーバーの学生にとって役立つ情報を発信していきます！
+        <div className="aside-container">
+          <div className="profile">
+            <img src={logo} alt="profile" id="profile-img"></img>
+            <p>Marie</p>
+            <div className="profile-description">
+              新卒で日系SIerに就職。スタートアップの営業を経た後、独学でWebデザインを勉強。現在バンクーバーにてフロントエンドデベロッパーとして就職するべく奮闘中。バンクーバーの学生にとって役立つ情報を発信していきます！
+            </div>
           </div>
+
           <div className="tag-lists section">
             <h2 className="title">記事カテゴリ</h2>
             <ul>{tagLists}</ul>
           </div>
+
           <div className="recommend section">
             <h2 className="title">おすすめ記事</h2>
+            <img src={recommendImg[0]} alt="recommend" id="recommend-img"></img>
           </div>
         </div>
       </div>
