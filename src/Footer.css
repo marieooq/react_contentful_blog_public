@@ -1,0 +1,7 @@
+#footer {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  padding: 30px;
+  border-top: 1px solid rgb(190, 190, 190);
+}

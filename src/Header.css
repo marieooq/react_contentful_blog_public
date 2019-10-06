@@ -2,6 +2,8 @@
   width: 80%;
   display: flex;
   margin: 0 auto;
+  padding: 30px;
+  border-bottom: 1px solid rgb(190, 190, 190);
 }
 
 #logo {
@@ -9,11 +11,6 @@
 }
 
 /*フォーム全体*/
-#header {
-  /* background-color: aqua; */
-  padding: 30px;
-  border-bottom: 1px solid rgb(190, 190, 190);
-}
 #header > form#form1 {
   position: relative;
   max-width: 270px;

@@ -2,6 +2,7 @@ import React from "react";
 // import ReactDOM from "react-dom";
 import ReactMarkdown from "react-markdown";
 import Contentful from "./Contentful";
+import { Link } from "react-router-dom";
 import "./Timeline.css";
 
 class Timeline extends React.Component {
@@ -11,7 +12,6 @@ class Timeline extends React.Component {
 
   getDataFromContentful = async () => {
     const response = await Contentful();
-    // console.log(response);
     this.setState({
       arrayData: response.items
     });
@@ -23,7 +23,11 @@ class Timeline extends React.Component {
 
   render() {
     const list = this.state.arrayData.map(data => {
-      // console.log("length of body is below.");
+      const returnPublishDate = () => {
+        console.log(data.fields.publishDate);
+        const publishDate = data.fields.publishDate.substring(0, 10);
+        console.log(publishDate);
+      };
 
       const returnImageURI = () => {
         if (data.fields.heroImage !== undefined) {
@@ -43,11 +47,8 @@ class Timeline extends React.Component {
           const bodyContent = data.fields.body;
           const bodyLength = bodyContent.length;
 
-          // console.log(bodyLength);
-
           if (bodyLength > cutPoint) {
             const tContent = bodyContent.substring(0, cutPoint) + "...";
-            // console.log(tContent);
             return tContent;
           } else {
             return bodyContent;

@@ -42,23 +42,18 @@ class Aside extends React.Component {
         data.sys.id === this.state.recommendId
       ) {
         const imgURL = data.fields.heroImage.fields.file.url;
-        console.log(data.sys.id);
-        console.log("This is inside recommendImg");
-        console.log(imgURL);
         return imgURL;
       }
     });
-
-    console.log(recommendImg);
 
     return (
       <div className="aside">
         <div className="aside-container">
           <div className="profile">
             <img src={logo} alt="profile" id="profile-img"></img>
-            <p>Marie</p>
+            <p id="author">Marie</p>
             <div className="profile-description">
-              新卒で日系SIerに就職。スタートアップの営業を経た後、独学でWebデザインを勉強。現在バンクーバーにてフロントエンドデベロッパーとして就職するべく奮闘中。バンクーバーの学生にとって役立つ情報を発信していきます！
+              新卒で日系SIerに就職するも、自分自身の成長速度に疑問を感じ、1年で退職。スタートアップの営業を経た後、独学でWebデザインを勉強。現在バンクーバーにてフロントエンドデベロッパーとして就職するべく奮闘中。バンクーバーの学生にとって役立つ情報を発信していきます！
             </div>
           </div>
 
