@@ -1,5 +1,5 @@
 import React from "react";
-// import logo from "./logo.svg";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import Timeline from "./Timeline";
 import Header from "./Header";
@@ -9,12 +9,14 @@ import Footer from "./Footer";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <div className="container">
-        <Timeline />
-        <Aside />
-      </div>
-      <Footer />
+      <Router>
+        <Header />
+        <div className="container">
+          <Timeline />
+          <Aside />
+        </div>
+        <Footer />
+      </Router>
     </div>
   );
 }
