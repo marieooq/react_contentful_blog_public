@@ -7,8 +7,7 @@ import "./Timeline.css";
 
 class Timeline extends React.Component {
   state = {
-    arrayData: [],
-    link: "default"
+    arrayData: []
   };
 
   getDataFromContentful = async () => {
@@ -24,12 +23,10 @@ class Timeline extends React.Component {
 
   render() {
     const list = this.state.arrayData.map((data, index) => {
-      const returnPublishDate = () => {
-        const publishDate = data.fields.publishDate.substring(0, 10);
-        return publishDate;
+      const returnSlug = () => {
+        const slug = data.fields.slug;
+        return slug;
       };
-
-      const date = returnPublishDate();
 
       const returnImageURI = () => {
         if (data.fields.heroImage !== undefined) {
@@ -63,16 +60,10 @@ class Timeline extends React.Component {
           <div className="imageArea">{returnImageURI()}</div>
           <div className="descriptionArea">
             <div className="titles">
-              <Link to={`/article/${date}`}>{data.fields.title}</Link>
+              <Link to={`/article/${returnSlug()}`}>{data.fields.title}</Link>
             </div>
             <ReactMarkdown className="description" source={truncateBody()} />
-            <a
-              href="https://marieotaki.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              続きはこちら
-            </a>
+            <Link to={`/article/${returnSlug()}`}>続きはこちら</Link>
           </div>
         </div>
       );
