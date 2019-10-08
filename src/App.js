@@ -1,10 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Timeline from "./Timeline";
 import Header from "./Header";
 import Aside from "./Aside";
 import Footer from "./Footer";
+import Article from "./Article";
 
 function App() {
   return (
@@ -12,7 +13,10 @@ function App() {
       <Router>
         <Header />
         <div className="container">
-          <Timeline />
+          <Switch>
+            <Route exact path="/" component={Timeline} />
+            <Route path="/article/:slug" component={Article} />
+          </Switch>
           <Aside />
         </div>
         <Footer />

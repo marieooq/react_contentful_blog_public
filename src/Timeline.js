@@ -2,7 +2,7 @@ import React from "react";
 // import ReactDOM from "react-dom";
 import ReactMarkdown from "react-markdown";
 import Contentful from "./Contentful";
-import { Link } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import "./Timeline.css";
 
 class Timeline extends React.Component {
@@ -60,10 +60,10 @@ class Timeline extends React.Component {
           <div className="imageArea">{returnImageURI()}</div>
           <div className="descriptionArea">
             <div className="titles">
-              <Link to={`/article/${returnSlug()}`}>{data.fields.title}</Link>
+              <Link to={`/article/${returnSlug()}`}> {data.fields.title}</Link>
             </div>
             <ReactMarkdown className="description" source={truncateBody()} />
-            <Link to={`/article/${returnSlug()}`}>続きはこちら</Link>
+            <Route to={`/article/${returnSlug()}`}>続きはこちら</Route>
           </div>
         </div>
       );
