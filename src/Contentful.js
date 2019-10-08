@@ -1,22 +1,37 @@
 import * as contentful from "contentful";
 import Config from "./Config";
 
-const Contentful = (skip, data) => {
-  const client = contentful.createClient(Config.contentful);
+class Contentful {
+  constructor() {
+    this.client = contentful.createClient(Config.contentful);
+  }
 
-  //refer to the data using contentful API
-  return new Promise(function(resolve, reject) {
-    client
-      .getEntries({
-        order: "sys.createdAt",
-        content_type: data,
-        //the number of contents for each page
-        limit: 10
-      })
-      .then(entries => {
-        resolve(entries);
-      });
-  });
-};
+  getArtcles(skip, data) {
+    const self = this;
+    //refer to the data using contentful API
+    return new Promise(function(resolve, reject) {
+      self.client
+        .getEntries({
+          order: "sys.createdAt",
+          content_type: data,
+          //the number of contents for each page
+          limit: 10
+        })
+        .then(entries => {
+          resolve(entries);
+        });
+    });
+  }
+
+  getArtcle(skip, data, slug) {
+    console.log({ slug });
+    //refer to the data using contentful API
+    return this.client.getEntries({
+      order: "-sys.createdAt",
+      content_type: data,
+      "fields.slug": slug
+    });
+  }
+}
 
 export default Contentful;

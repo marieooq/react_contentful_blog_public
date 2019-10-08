@@ -1,20 +1,32 @@
 import React from "react";
 // import ReactDOM from "react-dom";
-import ReactMarkdown from "react-markdown";
 import Contentful from "./Contentful";
-import { Link } from "react-router-dom";
 
 class Article extends React.Component {
-  state = {};
-  componentDidMount() {
+  state = {
+    articleFromContentful: {}
+  };
+
+  async componentDidMount() {
     const { slug } = this.props.match.params;
     // Contentful api 叩いて記事データ取得
-    const article = {
-      text: "sample"
-    };
+    const contentful = new Contentful();
+    try {
+      const article = await contentful.getArtcle(undefined, "blogPost", slug);
+      console.log(article);
+      this.setState({ articleFromContentful: article.items });
+    } catch (err) {
+      console.log("errorです");
+      console.log(err);
+    }
   }
 
   render() {
+    const returnArticle = () => {
+      console.log("inside returnArticle method");
+      console.log(this.state.articleFromContentful);
+    };
+    returnArticle();
     return <div>Article</div>;
   }
 }

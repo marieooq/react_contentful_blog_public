@@ -10,7 +10,8 @@ class Aside extends React.Component {
   };
 
   getDataFromContentful = async () => {
-    const response = await Contentful();
+    const contentful = new Contentful();
+    const response = await contentful.getArtcles();
     this.setState({
       arrayData: response.items
     });
