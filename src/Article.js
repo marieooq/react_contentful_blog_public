@@ -4,7 +4,7 @@ import Contentful from "./Contentful";
 
 class Article extends React.Component {
   state = {
-    articleFromContentful: {}
+    articleFromContentful: []
   };
 
   async componentDidMount() {
@@ -22,12 +22,15 @@ class Article extends React.Component {
   }
 
   render() {
-    const returnArticle = () => {
-      console.log("inside returnArticle method");
-      console.log(this.state.articleFromContentful);
-    };
-    returnArticle();
-    return <div>Article</div>;
+    console.log(this.state.articleFromContentful);
+
+    const bodyOfArticle = this.state.articleFromContentful.map(data => {
+      return data.fields.body;
+    });
+
+    console.log(bodyOfArticle);
+
+    return <div>{bodyOfArticle}</div>;
   }
 }
 
