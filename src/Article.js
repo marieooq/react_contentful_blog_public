@@ -23,39 +23,29 @@ class Article extends React.Component {
 
   render() {
     const bodyOfArticle = this.state.articleFromContentful.map(data => {
-      return data.fields.body;
+      const returnTitle = () => {
+        console.log(data.fields.title);
+        return data.fields.title;
+      };
+
+      const returnBody = () => {
+        console.log(data.fields.body);
+        return data.fields.body;
+      };
+
+      returnBody();
+
+      return (
+        <div className="article-container">
+          <div className="article-title">{returnTitle()}</div>
+          <div className="article-body">
+            <ReactMarkdown source={returnBody()}></ReactMarkdown>
+          </div>
+        </div>
+      );
     });
 
-    console.log(this.state.articleFromContentful);
-    console.log(bodyOfArticle[0]);
-
-    const Image = props => {
-      return <img {...props} style={{ maxWidth: "80%" }} alt="article-img" />;
-    };
-
-    const returnImageText = () => {
-      const myRegexp = /^!/;
-      //NG
-      // const myText = bodyOfArticle[0];
-      //OK
-      const myText = "!Hello";
-      //TypeError: Cannot read property 'match' of undefined
-      const result = myText.match(myRegexp);
-      console.log(result);
-    };
-
-    returnImageText();
-
-    return (
-      <div className="article-container">
-        {/* <div className="article-content">{bodyOfArticle}</div> */}
-        <ReactMarkdown source={bodyOfArticle[0]}></ReactMarkdown>
-        {/* <ReactMarkdown
-          source="![cosco hotdog 2](//images.ctfassets.net/79vndjll5vfu/6As4qiAJzaAKy3P25X8MUW/424cb0cadb2ae6624e02c0b009c02bca/cosco_hotdog_2.jpeg)"
-          renderers={{ image: Image }}
-        /> */}
-      </div>
-    );
+    return <div className="article-outer">{bodyOfArticle}</div>;
   }
 }
 
