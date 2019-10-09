@@ -1,0 +1,9 @@
+.article-container {
+  width: 70%;
+  box-sizing: border-box;
+}
+
+img.article-img {
+  display: block;
+  width: 500px;
+}
