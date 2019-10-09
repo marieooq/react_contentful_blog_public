@@ -26,21 +26,19 @@ class Article extends React.Component {
       return data.fields.body;
     });
 
-    console.log(bodyOfArticle);
+    console.log(bodyOfArticle[0]);
+
+    const Image = props => {
+      return <img {...props} style={{ maxWidth: "80%" }} alt="article-img" />;
+    };
 
     return (
       <div className="article-container">
         <div className="article-content">{bodyOfArticle}</div>
-        <img
-          src="//images.ctfassets.net/79vndjll5vfu/6As4qiAJzaAKy3P25X8MUW/424cb0cadb2ae6624e02c0b009c02bca/cosco_hotdog_2.jpeg"
-          alt="article-img"
-          className="article-img"
-          width="300px"
-        ></img>
-        {/* <ReactMarkdown
-          source="![Espen](https://espen.codes/assets/img/avatar-colored.jpg)"
+        <ReactMarkdown
+          source="![cosco hotdog 2](//images.ctfassets.net/79vndjll5vfu/6As4qiAJzaAKy3P25X8MUW/424cb0cadb2ae6624e02c0b009c02bca/cosco_hotdog_2.jpeg)"
           renderers={{ image: Image }}
-        /> */}
+        />
       </div>
     );
   }
