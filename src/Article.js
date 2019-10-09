@@ -35,9 +35,9 @@ class Article extends React.Component {
 
     const returnImageText = () => {
       const myRegexp = /^!/;
-      //ng!
+      //NG
       // const myText = bodyOfArticle[0];
-      //ok!
+      //OK
       const myText = "!Hello";
       //TypeError: Cannot read property 'match' of undefined
       const result = myText.match(myRegexp);
@@ -50,10 +50,10 @@ class Article extends React.Component {
       <div className="article-container">
         {/* <div className="article-content">{bodyOfArticle}</div> */}
         <ReactMarkdown source={bodyOfArticle[0]}></ReactMarkdown>
-        <ReactMarkdown
+        {/* <ReactMarkdown
           source="![cosco hotdog 2](//images.ctfassets.net/79vndjll5vfu/6As4qiAJzaAKy3P25X8MUW/424cb0cadb2ae6624e02c0b009c02bca/cosco_hotdog_2.jpeg)"
           renderers={{ image: Image }}
-        />
+        /> */}
       </div>
     );
   }

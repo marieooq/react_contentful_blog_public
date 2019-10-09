@@ -24,7 +24,6 @@ class Contentful {
   }
 
   getArtcle(skip, data, slug) {
-    console.log({ slug });
     //refer to the data using contentful API
     return this.client.getEntries({
       order: "-sys.createdAt",
