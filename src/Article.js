@@ -26,6 +26,7 @@ class Article extends React.Component {
       return data.fields.body;
     });
 
+    console.log(this.state.articleFromContentful);
     console.log(bodyOfArticle[0]);
 
     const Image = props => {
