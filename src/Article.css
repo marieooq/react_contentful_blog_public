@@ -33,7 +33,8 @@
 .article-tags ul {
   list-style: none;
   display: flex;
-  margin-bottom: 60px;
+  padding: 0;
+  margin: 0 0 60px;
 }
 
 .article-tags ul li {
