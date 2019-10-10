@@ -4,51 +4,27 @@
   margin: 0 auto;
   padding: 30px;
   border-bottom: 1px solid rgb(190, 190, 190);
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo {
 }
 
 #logo {
   width: 80px;
 }
 
-/*フォーム全体*/
-#header > form#form1 {
-  position: relative;
-  max-width: 270px;
-  margin-bottom: 15px;
-  margin-left: 30px;
-  margin-top: 15px;
+ul.header-nav {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-/*検索ボックス*/
-#header > form#form1 > input#sbox1 {
-  position: absolute; /*フォームの絶対位置*/
-  left: 0;
-  top: 0;
-  outline: 0; /*クリック時の青い枠線消す*/
-  width: 300px;
-  height: 50px; /*検索ボックスの高さ */
-  padding: 0 10px; /*テキスト位置調整*/
-  border-radius: 2px 0 0 2px; /*検索ボックスの角を丸める*/
-  background: #eee; /*検索ボックスの背景カラー*/
+ul.header-nav li {
   font-size: 1.2em;
-}
-
-/*検索ボタン*/
-#sbtn1 {
-  width: 70px; /*検索ボタンの横幅*/
-  height: 54px; /*検索ボタンの縦幅*/
-  position: absolute; /*検索ボタンの絶対位置*/
-  left: 270px; /*検索ボタンの位置調整*/
-  top: 0;
-  border-radius: 0 2px 2px 0; /*検索ボタンの角を丸める*/
-  background: #7fbfff; /*検索ボタンの背景カラー*/
-  border: none; /*検索ボタンの枠線を消す*/
-  color: #fff; /*検索ボタンのテキストカラー*/
-  font-weight: bold; /*検索ボタンのテキスト太字*/
-  font-size: 16px; /*検索ボタンのフォントサイズ*/
-}
-
-/*検索ボタンマウスオーバー時*/
-#sbtn1:hover {
-  color: #666; /*検索ボタンマウスオーバー時のフォントカラー*/
+  margin-left: 30px;
+  list-style: none;
 }
