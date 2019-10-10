@@ -53,6 +53,11 @@ class Header extends React.Component {
           </Link>
         </div>
         <ul className="header-nav">{tagLists}</ul>
+
+        {/* <Switch>
+          <Route exact path="/" component={Timeline} />
+          <Route path="/article/:slug" component={Article} />
+        </Switch> */}
       </div>
     );
   }
