@@ -16,7 +16,7 @@ class Article extends React.Component {
       const article = await contentful.getArtcle(undefined, "blogPost", slug);
       this.setState({ articleFromContentful: article.items });
     } catch (err) {
-      console.log("errorです");
+      console.log("error");
       console.log(err);
     }
   }
@@ -24,22 +24,45 @@ class Article extends React.Component {
   render() {
     const bodyOfArticle = this.state.articleFromContentful.map(data => {
       const returnTitle = () => {
-        console.log(data.fields.title);
         return data.fields.title;
       };
 
+      const returnPublishedDate = () => {
+        let date = data.fields.publishDate.substring(0, 10);
+        let replacedDate = date.replace("-", "/");
+
+        while (date !== replacedDate) {
+          date = date.replace("-", "/");
+          replacedDate = replacedDate.replace("-", "/");
+        }
+        return replacedDate;
+      };
+
       const returnBody = () => {
-        console.log(data.fields.body);
         return data.fields.body;
       };
 
-      returnBody();
+      const returnTags = () => {
+        console.log("-------");
+        console.log(data.fields.tags);
+        console.log("-------");
+        const tagList = data.fields.tags.map(data => {
+          const listContent = `#${data}`;
+          return <li>{listContent}</li>;
+        });
+        return tagList;
+      };
 
+      returnTags();
       return (
         <div className="article-container">
           <div className="article-title">{returnTitle()}</div>
+          <p className="article-date">{returnPublishedDate()}</p>
           <div className="article-body">
             <ReactMarkdown source={returnBody()}></ReactMarkdown>
+          </div>
+          <div className="article-tags">
+            <ul>{returnTags()}</ul>
           </div>
         </div>
       );
