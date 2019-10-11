@@ -40,21 +40,12 @@ class Timeline extends React.Component {
         }
       };
 
-      const truncateBody = () => {
-        const cutPoint = 150;
-
-        if (data.fields.body !== undefined) {
-          const bodyContent = data.fields.body;
-          const bodyLength = bodyContent.length;
-
-          if (bodyLength > cutPoint) {
-            const tContent = bodyContent.substring(0, cutPoint) + "...";
-            return tContent;
-          } else {
-            return bodyContent;
-          }
-        }
+      const returnDescription = () => {
+        console.log(data.fields.description);
+        return data.fields.description;
       };
+
+      returnDescription();
 
       return (
         <div className="article">
@@ -63,7 +54,10 @@ class Timeline extends React.Component {
             <div className="titles">
               <Link to={`/article/${returnSlug()}`}> {data.fields.title}</Link>
             </div>
-            <ReactMarkdown className="description" source={truncateBody()} />
+            <ReactMarkdown
+              className="description"
+              source={returnDescription()}
+            />
             <div className="detail-btn">
               <Link to={`/article/${returnSlug()}`}>READ MORE</Link>
             </div>

@@ -57,15 +57,9 @@ class Header extends React.Component {
     // });
 
     const tagLists = [
-      <Link to="/tag/lunch">Food</Link>,
+      <Link to="/tag/food">Food</Link>,
       <Link to="/tag/supermarket">Shopping</Link>
     ];
-
-    const Child = ({ match }) => (
-      <div>
-        <h3>ID:{match.params.id}</h3>
-      </div>
-    );
 
     return (
       <div id="header">
@@ -75,24 +69,6 @@ class Header extends React.Component {
           </Link>
         </div>
         <ul className="header-nav">{tagLists}</ul>
-
-        {/* <Router>
-          <ul>
-            <li>
-              <Link to="/google">Google</Link>
-            </li>
-            <li>
-              <Link to="/apple">Apple</Link>
-            </li>
-            <li>
-              <Link to="/facebook">Facebook</Link>
-            </li>
-            <li>
-              <Link to="/amazon">Amazon</Link>
-            </li>
-          </ul>
-          <Route path="/:id" component={Child}></Route>
-        </Router> */}
       </div>
     );
   }
