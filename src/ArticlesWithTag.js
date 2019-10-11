@@ -26,6 +26,26 @@ class ArticlesWithTag extends React.Component {
     }
   }
 
+  async componentDidUpdate(prevProps) {
+    const { tag } = this.props.match.params;
+    //get article from contentful API
+    const contentful = new Contentful();
+    if (tag !== prevProps.match.params) {
+      // if props have changed
+      try {
+        const article = await contentful.getArtcleWithTags(
+          undefined,
+          "blogPost",
+          tag
+        );
+        this.setState({ articleFromContentful: article.items });
+      } catch (err) {
+        console.log("error");
+        console.log(err);
+      }
+    }
+  }
+
   // async componentDidUpdate() {
   //   const { tag } = this.props.match.params;
   //   //get article from contentful API

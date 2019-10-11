@@ -1,6 +1,6 @@
 #header {
   width: 100%;
-  padding: 45px 0;
+  padding: 30px 0;
   /* border-bottom: 1px solid rgb(190, 190, 190); */
   background-color: var(--baseColor);
   margin-bottom: 30px;
@@ -18,17 +18,13 @@
 .header-logo a {
   text-decoration: none;
   color: #fff;
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: 700;
   letter-spacing: -0.05em;
 }
 
 .header-logo a span#logo-students {
   color: var(--accentColor);
-}
-
-#logo {
-  width: 80px;
 }
 
 ul.header-nav {
@@ -69,7 +65,7 @@ ul.header-nav li {
   }
 
   .header-logo a {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 }
 
