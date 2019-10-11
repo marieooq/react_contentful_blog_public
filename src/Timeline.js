@@ -42,11 +42,8 @@ class Timeline extends React.Component {
 
       const createImageTag = () => {
         let tag = data.fields.tags[0].toUpperCase();
-        console.log(tag);
         return <div className="thumbnail-tag">{tag}</div>;
       };
-
-      createImageTag();
 
       const returnDescription = () => {
         return data.fields.description;

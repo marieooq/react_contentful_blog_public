@@ -2,6 +2,7 @@
   width: 30%;
   box-sizing: border-box;
   color: var(--textColor);
+  /* background-color: aqua; */
 }
 
 .aside-container {
@@ -42,8 +43,8 @@
 
 .title {
   width: 100%;
-  height: 50px;
-  line-height: 50px;
+  height: 3em;
+  line-height: 3em;
   font-size: 1em;
   color: #fff;
   background-color: var(--baseColor);
@@ -74,6 +75,41 @@ img#recommend-img {
   margin-top: 15px;
 }
 
-.recommend-title:hover {
+.recommend-title:hover,
+img#recommend-img:hover {
   opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+}
+
+@media (min-width: 768px) and (max-width: 1170px) {
+  .aside-container {
+    width: 180px;
+    margin: 30px 0 30px 30px;
+  }
+
+  .profile {
+    width: 180px;
+    margin-bottom: 30px;
+  }
+
+  .profile img#profile-img {
+    width: 150px;
+  }
+
+  .title {
+    font-size: 0.9em;
+  }
+
+  img#recommend-img {
+    width: 180px;
+  }
+
+  .recommend-title {
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: 1170px) {
 }
