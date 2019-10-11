@@ -1,8 +1,7 @@
 .article {
-  background-color: aqua;
   display: flex;
   justify-content: space-between;
-  height: 400px;
+  height: 25em;
   color: var(--textColor);
   border-radius: 5px;
   box-shadow: 0 2px 5px #ccc;
@@ -51,9 +50,6 @@
   /* width: 80%; */
 }
 
-.detail-btn {
-}
-
 .detail-btn a {
   display: inline-block;
   display: flex;
@@ -79,6 +75,20 @@
 }
 
 @media (min-width: 768px) and (max-width: 1170px) {
+  .article {
+    height: 20em;
+    color: var(--textColor);
+    padding: 1em;
+    margin: 2em 0;
+  }
+  .titles {
+    font-size: 1.1em;
+    font-weight: 700;
+  }
+
+  .description {
+    font-size: 0.9em;
+  }
 }
 
 @media (min-width: 1170px) {
