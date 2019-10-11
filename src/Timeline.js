@@ -40,15 +40,24 @@ class Timeline extends React.Component {
         }
       };
 
+      const createImageTag = () => {
+        let tag = data.fields.tags[0].toUpperCase();
+        console.log(tag);
+        return <div className="thumbnail-tag">{tag}</div>;
+      };
+
+      createImageTag();
+
       const returnDescription = () => {
         return data.fields.description;
       };
 
-      returnDescription();
-
       return (
         <div className="article">
-          <div className="imageArea">{returnImageURI()}</div>
+          <div className="imageArea">
+            {createImageTag()}
+            {returnImageURI()}
+          </div>
           <div className="descriptionArea">
             <div className="titles">
               <Link to={`/article/${returnSlug()}`}> {data.fields.title}</Link>

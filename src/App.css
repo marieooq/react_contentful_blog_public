@@ -1,8 +1,14 @@
 :root {
-  --baseColor: rgb(48, 47, 47);
+  --baseColor: rgb(2, 8, 46);
   --accentColor: #d65b5d;
   --accentColor: #fdd835;
+  --accentColor: #57cddc;
   --textColor: rgb(39, 38, 38);
+
+  /* font-family: 'Fjalla One', sans-serif;
+font-family: 'Francois One', sans-serif;
+font-family: 'Alfa Slab One', cursive;
+font-family: 'Josefin Sans', sans-serif; */
 }
 .container {
   display: flex;

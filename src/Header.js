@@ -63,12 +63,15 @@ class Header extends React.Component {
 
     return (
       <div id="header">
-        <div className="header-logo">
-          <Link to={"/"}>
-            <img src={logo} alt="logo" id="logo"></img>
-          </Link>
+        <div className="header-container">
+          <div className="header-logo">
+            <Link to={"/"}>
+              Vancouver <span id="logo-students">Students</span>
+              {/* <img src={logo} alt="logo" id="logo"></img> */}
+            </Link>
+          </div>
+          <ul className="header-nav">{tagLists}</ul>
         </div>
-        <ul className="header-nav">{tagLists}</ul>
       </div>
     );
   }

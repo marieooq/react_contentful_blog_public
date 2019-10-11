@@ -8,10 +8,27 @@
   align-items: center;
   margin: 30px 0;
 }
+
+.imageArea {
+  position: relative;
+}
+
 .thumbnails img {
   display: block;
   width: 400px;
-  margin: 30px;
+  margin-left: 30px;
+}
+
+.thumbnail-tag {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  color: #fff;
+  font-weight: 700;
+  padding: 15px 30px;
+  border-radius: 0 0 10px 0;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: var(--baseColor);
 }
 
 .descriptionArea {

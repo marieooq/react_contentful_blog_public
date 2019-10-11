@@ -7,10 +7,12 @@ import Aside from "./Aside";
 import Footer from "./Footer";
 import Article from "./Article";
 import ArticlesWithTag from "./ArticlesWithTag";
+import GlobalStyle from "./grobalStyles";
 
 function App() {
   return (
     <div className="App">
+      <GlobalStyle />
       <Router>
         <Header />
         <div className="container">
