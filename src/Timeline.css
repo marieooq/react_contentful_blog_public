@@ -23,12 +23,12 @@
   position: absolute;
   top: 0;
   left: 30px;
-  color: #fff;
+  color: var(--baseColor);
   font-weight: 700;
   padding: 15px 30px;
   border-radius: 0 0 10px 0;
   font-family: "Josefin Sans", sans-serif;
-  background-color: var(--baseColor);
+  background-color: var(--accentColor);
 }
 
 .descriptionArea {
@@ -47,12 +47,11 @@
 
 .detail-btn a {
   display: inline-block;
-  color: var(--baseColor);
-  border: 2px solid var(--accentColor);
-  background-color: var(--accentColor);
+  color: #fff;
+  background-color: var(--baseColor);
   font-weight: 800;
   text-decoration: none;
-  padding: 1.2em 6.6em;
+  padding: 1.2em 7.5em;
   border-radius: 5px;
   letter-spacing: 0em;
   line-height: 1.1em;

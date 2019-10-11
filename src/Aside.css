@@ -45,7 +45,8 @@
   height: 50px;
   line-height: 50px;
   font-size: 1em;
-  background-color: var(--accentColor);
+  color: #fff;
+  background-color: var(--baseColor);
   text-align: center;
   margin-bottom: 15px;
 }
