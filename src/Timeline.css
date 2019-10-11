@@ -1,12 +1,7 @@
-.article-container {
-  width: 70%;
-  box-sizing: border-box;
-  /* background-color: aquamarine; */
-}
 .article {
   display: flex;
   height: 400px;
-  background: #fff;
+  color: var(--textColor);
   border-radius: 5px;
   box-shadow: 0 2px 5px #ccc;
   box-sizing: border-box;
@@ -33,18 +28,6 @@
   color: rgb(43, 42, 42);
 }
 
-.description {
-  /* background-color: aquamarine; */
-  /* height: 300px; */
-  overflow: hidden;
-}
-
-/* .detail-btn {
-  width: 300px;
-  height: 50px;
-  background-color: black;
-} */
-
 .detail-btn a {
   display: inline-block;
   color: var(--baseColor);
@@ -57,4 +40,8 @@
   letter-spacing: 0em;
   line-height: 1.1em;
   margin: 0 auto;
+}
+
+.detail-btn a:hover {
+  opacity: 0.8;
 }

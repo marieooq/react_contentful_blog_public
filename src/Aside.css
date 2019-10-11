@@ -64,10 +64,6 @@
   font-weight: 700;
   font-size: 0.8em;
 }
-/* 
-.recommend a:hover {
-  border-bottom: 1px solid var(--textColor);
-} */
 
 img#recommend-img {
   width: 200px;
