@@ -41,7 +41,6 @@ class Timeline extends React.Component {
       };
 
       const returnDescription = () => {
-        console.log(data.fields.description);
         return data.fields.description;
       };
 

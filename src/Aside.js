@@ -23,25 +23,37 @@ class Aside extends React.Component {
   }
 
   render() {
-    const tagArray = this.state.arrayData.map(data => {
-      return data.fields.tags;
-    });
+    const recommendArea = this.state.arrayData.map(data => {
+      const returnRecommendImg = () => {
+        if (
+          data.fields.heroImage !== undefined &&
+          data.sys.id === this.state.recommendId
+        ) {
+          const imgURL = data.fields.heroImage.fields.file.url;
+          return imgURL;
+        }
+      };
 
-    let tagData = [];
-    tagArray.forEach(data => {
-      data.forEach(child => {
-        tagData.push(child);
-      });
-    });
+      const returnTitle = () => {
+        if (data.sys.id === this.state.recommendId) {
+          const title = data.fields.title;
+          return title;
+        }
+      };
 
-    const recommendImg = this.state.arrayData.map(data => {
-      if (
-        data.fields.heroImage !== undefined &&
-        data.sys.id === this.state.recommendId
-      ) {
-        const imgURL = data.fields.heroImage.fields.file.url;
-        return imgURL;
-      }
+      return (
+        <div className="recommend section">
+          <h2 className="title">RECOMMEND</h2>
+          <Link to={"article/reasonable-lunch"}>
+            <img
+              src={returnRecommendImg()}
+              alt="recommend"
+              id="recommend-img"
+            ></img>
+            <div className="recommend-title">{returnTitle()}</div>
+          </Link>
+        </div>
+      );
     });
 
     return (
@@ -54,17 +66,7 @@ class Aside extends React.Component {
               新卒で日系SIerに就職するも、自分自身の成長速度に疑問を感じ、1年で退職。スタートアップの営業を経た後、独学でWebデザインを勉強。現在バンクーバーにてフロントエンドデベロッパーとして就職するべく奮闘中。バンクーバーの学生にとって役立つ情報を発信していきます！
             </div>
           </div>
-
-          <div className="recommend section">
-            <h2 className="title">RECOMMEND</h2>
-            <Link to={"article/reasonable-lunch"}>
-              <img
-                src={recommendImg[0]}
-                alt="recommend"
-                id="recommend-img"
-              ></img>
-            </Link>
-          </div>
+          {recommendArea[0]}
         </div>
       </div>
     );

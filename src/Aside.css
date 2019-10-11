@@ -1,7 +1,7 @@
 .aside {
   width: 30%;
   box-sizing: border-box;
-  /* background-color: aqua; */
+  color: var(--textColor);
 }
 
 .aside-container {
@@ -11,11 +11,14 @@
 
 .profile {
   width: 200px;
+  margin-bottom: 30px;
 }
 
 .profile img#profile-img {
-  width: 200px;
+  display: block;
+  width: 180px;
   border-radius: 50%;
+  margin: 0 auto;
 }
 
 .profile p#author {
@@ -43,7 +46,6 @@
   line-height: 50px;
   font-size: 1em;
   background-color: var(--accentColor);
-  color: var(--baseColor);
   text-align: center;
   margin-bottom: 15px;
 }
@@ -56,6 +58,25 @@
   margin-bottom: 15px;
 }
 
+.recommend a {
+  color: var(--textColor);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.8em;
+}
+/* 
+.recommend a:hover {
+  border-bottom: 1px solid var(--textColor);
+} */
+
 img#recommend-img {
   width: 200px;
+}
+
+.recommend-title {
+  margin-top: 15px;
+}
+
+.recommend-title:hover {
+  opacity: 0.8;
 }

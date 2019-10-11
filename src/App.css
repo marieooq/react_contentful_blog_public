@@ -2,6 +2,7 @@
   --baseColor: rgb(48, 47, 47);
   --accentColor: #d65b5d;
   --accentColor: #fdd835;
+  --textColor: rgb(43, 42, 42);
 }
 .container {
   display: flex;
