@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./img/profile_marie.jpg";
 import Contentful from "./Contentful";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import "./Aside.css";
 
 class Aside extends React.Component {
@@ -33,10 +34,6 @@ class Aside extends React.Component {
       });
     });
 
-    const tagLists = tagData.map(data => {
-      return <li>{data}</li>;
-    });
-
     const recommendImg = this.state.arrayData.map(data => {
       if (
         data.fields.heroImage !== undefined &&
@@ -58,14 +55,15 @@ class Aside extends React.Component {
             </div>
           </div>
 
-          {/* <div className="tag-lists section">
-            <h2 className="title">記事カテゴリ</h2>
-            <ul>{tagLists}</ul>
-          </div> */}
-
           <div className="recommend section">
             <h2 className="title">RECOMMEND</h2>
-            <img src={recommendImg[0]} alt="recommend" id="recommend-img"></img>
+            <Link to={"article/reasonable-lunch"}>
+              <img
+                src={recommendImg[0]}
+                alt="recommend"
+                id="recommend-img"
+              ></img>
+            </Link>
           </div>
         </div>
       </div>
