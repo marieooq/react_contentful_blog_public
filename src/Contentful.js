@@ -31,6 +31,16 @@ class Contentful {
       "fields.slug": slug
     });
   }
+
+  getArtcleWithTags(skip, data, tags) {
+    console.log("getArtcleWithTags");
+    //refer to the data using contentful API
+    return this.client.getEntries({
+      order: "-sys.createdAt",
+      content_type: data,
+      "fields.tags": tags
+    });
+  }
 }
 
 export default Contentful;

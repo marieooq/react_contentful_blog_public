@@ -64,7 +64,9 @@ class Timeline extends React.Component {
               <Link to={`/article/${returnSlug()}`}> {data.fields.title}</Link>
             </div>
             <ReactMarkdown className="description" source={truncateBody()} />
-            <Route to={`/article/${returnSlug()}`}>続きはこちら</Route>
+            <div className="detail-btn">
+              <Link to={`/article/${returnSlug()}`}>READ MORE</Link>
+            </div>
           </div>
         </div>
       );

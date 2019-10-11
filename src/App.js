@@ -6,6 +6,7 @@ import Header from "./Header";
 import Aside from "./Aside";
 import Footer from "./Footer";
 import Article from "./Article";
+import ArticlesWithTag from "./ArticlesWithTag";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Timeline} />
             <Route path="/article/:slug" component={Article} />
+            <Route path="/tag/:tag" component={ArticlesWithTag} />
           </Switch>
           <Aside />
         </div>

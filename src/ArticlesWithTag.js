@@ -3,23 +3,45 @@ import ReactMarkdown from "react-markdown";
 import Contentful from "./Contentful";
 import "./Article.css";
 
-class Article extends React.Component {
+class ArticlesWithTag extends React.Component {
   state = {
     articleFromContentful: []
   };
 
   async componentDidMount() {
-    const { slug } = this.props.match.params;
+    console.log("componentDidMount");
+    const { tag } = this.props.match.params;
     //get article from contentful API
     const contentful = new Contentful();
     try {
-      const article = await contentful.getArtcle(undefined, "blogPost", slug);
+      const article = await contentful.getArtcleWithTags(
+        undefined,
+        "blogPost",
+        tag
+      );
       this.setState({ articleFromContentful: article.items });
     } catch (err) {
       console.log("error");
       console.log(err);
     }
   }
+
+  // async componentDidUpdate() {
+  //   const { tag } = this.props.match.params;
+  //   //get article from contentful API
+  //   const contentful = new Contentful();
+  //   try {
+  //     const article = await contentful.getArtcleWithTags(
+  //       undefined,
+  //       "blogPost",
+  //       tag
+  //     );
+  //     this.setState({ articleFromContentful: article.items });
+  //   } catch (err) {
+  //     console.log("error");
+  //     console.log(err);
+  //   }
+  // }
 
   render() {
     const bodyOfArticle = this.state.articleFromContentful.map(data => {
@@ -69,4 +91,4 @@ class Article extends React.Component {
   }
 }
 
-export default Article;
+export default ArticlesWithTag;

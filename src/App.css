@@ -1,7 +1,11 @@
+:root {
+  --baseColor: rgb(48, 47, 47);
+  --accentColor: #d65b5d;
+  --accentColor: #fdd835;
+}
 .container {
   display: flex;
   width: 80%;
   margin: 0 auto;
   padding: 0;
-  /* background-color: aqua; */
 }

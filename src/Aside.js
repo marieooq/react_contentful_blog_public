@@ -58,13 +58,13 @@ class Aside extends React.Component {
             </div>
           </div>
 
-          <div className="tag-lists section">
+          {/* <div className="tag-lists section">
             <h2 className="title">記事カテゴリ</h2>
             <ul>{tagLists}</ul>
-          </div>
+          </div> */}
 
           <div className="recommend section">
-            <h2 className="title">おすすめ記事</h2>
+            <h2 className="title">RECOMMEND</h2>
             <img src={recommendImg[0]} alt="recommend" id="recommend-img"></img>
           </div>
         </div>
