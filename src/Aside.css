@@ -11,7 +11,7 @@
 }
 
 .profile {
-  width: 200px;
+  width: 100%;
   margin-bottom: 30px;
 }
 
@@ -81,6 +81,35 @@ img#recommend-img:hover {
 }
 
 @media (max-width: 768px) {
+  .aside {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .aside-container {
+    width: 90%;
+  }
+
+  .profile {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .profile img#profile-img {
+    width: 180px;
+  }
+
+  .title {
+    font-size: 0.9em;
+  }
+
+  .recommend a {
+    font-size: 1em;
+  }
+
+  img#recommend-img {
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1170px) {

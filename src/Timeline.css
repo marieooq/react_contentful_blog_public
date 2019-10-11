@@ -68,10 +68,15 @@
 }
 
 @media (max-width: 767px) {
+  .article-container {
+    width: 100%;
+    margin: 0 auto;
+  }
   .article {
     flex-wrap: wrap;
     padding: 2em;
     margin: 2em 0;
+    width: 100%;
   }
   .imageArea {
     width: 100%;
