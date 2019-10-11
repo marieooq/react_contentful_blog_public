@@ -66,6 +66,7 @@ class Timeline extends React.Component {
               className="description"
               source={returnDescription()}
             />
+
             <div className="detail-btn">
               <Link to={`/article/${returnSlug()}`}>READ MORE</Link>
             </div>
