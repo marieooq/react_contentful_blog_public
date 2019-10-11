@@ -44,6 +44,22 @@ class Article extends React.Component {
 
       const returnTags = () => {
         const tagList = data.fields.tags.map(data => {
+          switch (data) {
+            case "food":
+              data = "ごはん";
+              break;
+            case "lunch":
+              data = "ランチ";
+              break;
+            case "good-value":
+              data = "コスパ";
+              break;
+            case "supermarket":
+              data = "スーパー";
+              break;
+            default:
+              data = "default";
+          }
           const listContent = `#${data}`;
           return <li>{listContent}</li>;
         });

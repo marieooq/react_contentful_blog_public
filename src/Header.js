@@ -57,8 +57,8 @@ class Header extends React.Component {
     // });
 
     const tagLists = [
-      <Link to="/tag/ランチ">ランチ</Link>,
-      <Link to="/tag/スーパー">スーパー</Link>
+      <Link to="/tag/lunch">Food</Link>,
+      <Link to="/tag/supermarket">Shopping</Link>
     ];
 
     const Child = ({ match }) => (
