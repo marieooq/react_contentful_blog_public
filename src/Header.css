@@ -1,7 +1,7 @@
 #header {
   width: 100%;
   padding: 30px 0;
-  background-color: var(--accentColor);
+  background-color: var(--baseColor);
   margin-bottom: 15px;
   font-family: "Josefin Sans", sans-serif;
 }
