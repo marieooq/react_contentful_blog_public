@@ -57,6 +57,12 @@ class Article extends React.Component {
             case "supermarket":
               data = "スーパー";
               break;
+            case "shopping":
+              data = "買い物";
+              break;
+            case "leisure":
+              data = "お出かけ";
+              break;
             default:
               data = "default";
           }

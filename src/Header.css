@@ -1,9 +1,8 @@
 #header {
   width: 100%;
   padding: 30px 0;
-  /* border-bottom: 1px solid rgb(190, 190, 190); */
   background-color: var(--baseColor);
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   font-family: "Josefin Sans", sans-serif;
 }
 
