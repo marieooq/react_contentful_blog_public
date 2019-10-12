@@ -19,7 +19,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Timeline} />
             <Route path="/article/:slug" component={Article} />
-            <Route path="/tag/:tag" component={ArticlesWithTag} />
+            <Route path="/category/:tag" component={ArticlesWithTag} />
           </Switch>
           <Aside />
         </div>

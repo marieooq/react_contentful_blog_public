@@ -1,7 +1,7 @@
 :root {
   --baseColor: rgb(2, 8, 46);
-  /* --accentColor: #d65b5d;
-  --accentColor: #fdd835; */
+  --accentColor: #d65b5d;
+  --accentColor: #fdd835;
   --accentColor: #57cddc;
   --textColor: rgb(39, 38, 38);
 

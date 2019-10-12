@@ -66,6 +66,17 @@ class Aside extends React.Component {
               新卒で日系SIerに就職するも、自分自身の成長速度に疑問を感じ、1年で退職。スタートアップの営業を経た後、独学でWebデザインを勉強。現在バンクーバーにてフロントエンドデベロッパーとして就職するべく奮闘中。バンクーバーの学生にとって役立つ情報を発信していきます！
             </div>
           </div>
+          <a
+            class="twitter-timeline"
+            href="https://twitter.com/MarieWoq?ref_src=twsrc%5Etfw"
+          >
+            Tweets by MarieWoq
+          </a>{" "}
+          <script
+            async
+            src="https://platform.twitter.com/widgets.js"
+            charset="utf-8"
+          ></script>
           {recommendArea[0]}
         </div>
       </div>
