@@ -14,7 +14,7 @@
 .article-title {
   font-size: 1.5em;
   font-weight: 700;
-  padding: 60px 0 15px;
+  padding: 60px 0 15px 0;
 }
 
 .article-date {
