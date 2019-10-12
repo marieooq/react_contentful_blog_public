@@ -68,17 +68,18 @@ class Aside extends React.Component {
             </div>
           </div>
           {recommendArea[0]}
-          <a
-            class="twitter-timeline"
-            href="https://twitter.com/MarieWoq?ref_src=twsrc%5Etfw"
-          >
-            Tweets by MarieWoq
-          </a>{" "}
-          <script
-            async
-            src="https://platform.twitter.com/widgets.js"
-            charset="utf-8"
-          ></script>
+          <h2 className="title">TWITTER</h2>
+          <Timeline
+            dataSource={{
+              sourceType: "profile",
+              screenName: "mariewoq"
+            }}
+            options={{
+              username: "MarieWoq",
+              height: "400"
+            }}
+            onLoad={() => console.log("Timeline is loaded!")}
+          />
         </div>
       </div>
     );
