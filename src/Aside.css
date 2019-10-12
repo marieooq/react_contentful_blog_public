@@ -50,6 +50,7 @@
   background-color: var(--accentColor);
   text-align: center;
   margin-bottom: 15px;
+  border-radius: 5px;
 }
 
 .tag-lists ul li {
