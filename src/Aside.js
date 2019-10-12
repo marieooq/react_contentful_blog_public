@@ -42,10 +42,17 @@ class Aside extends React.Component {
         }
       };
 
+      const returnSlug = () => {
+        if (data.sys.id === this.state.recommendId) {
+          const slug = data.fields.slug;
+          return slug;
+        }
+      };
+
       return (
         <div className="recommend section">
           <h2 className="title">RECOMMEND</h2>
-          <Link to={"article/reasonable-lunch"}>
+          <Link to={`article/${returnSlug()}`}>
             <img
               src={returnRecommendImg()}
               alt="recommend"
