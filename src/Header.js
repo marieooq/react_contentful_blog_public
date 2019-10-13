@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./img/vanStudentsInfo_logo.png";
 import Contentful from "./Contentful";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import "./Header.css";

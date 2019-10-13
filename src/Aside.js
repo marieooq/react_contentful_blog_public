@@ -52,7 +52,7 @@ class Aside extends React.Component {
       return (
         <div className="recommend section">
           <h2 className="title">RECOMMEND</h2>
-          <Link to={`article/${returnSlug()}`}>
+          <Link to={`/article/${returnSlug()}`}>
             <img
               src={returnRecommendImg()}
               alt="recommend"
