@@ -5,7 +5,8 @@ import "./Article.css";
 
 class Article extends React.Component {
   state = {
-    articleFromContentful: []
+    articleFromContentful: [],
+    contentReactMarkDown: ""
   };
 
   async componentDidMount() {
@@ -38,7 +39,7 @@ class Article extends React.Component {
         return replacedDate;
       };
 
-      const returnBody = () => {
+      const set = () => {
         return data.fields.body;
       };
 
@@ -78,7 +79,7 @@ class Article extends React.Component {
           <div className="article-title">{returnTitle()}</div>
           <p className="article-date">{returnPublishedDate()}</p>
           <div className="article-body">
-            <ReactMarkdown source={returnBody()}></ReactMarkdown>
+            <ReactMarkdown source={set()}></ReactMarkdown>
           </div>
           <div className="article-tags">
             <ul>{returnTags()}</ul>
