@@ -103,7 +103,10 @@ class ArticlesWithTag extends React.Component {
           <div className="article-title">{returnTitle()}</div>
           <p className="article-date">{returnPublishedDate()}</p>
           <div className="article-body">
-            <ReactMarkdown source={returnBody()}></ReactMarkdown>
+            <ReactMarkdown
+              escapeHtml={false}
+              source={returnBody()}
+            ></ReactMarkdown>
           </div>
           <div className="article-tags">
             <ul>{returnTags()}</ul>

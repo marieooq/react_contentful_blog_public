@@ -11,7 +11,6 @@ class Header extends React.Component {
   render() {
     const list = {
       Food: "food",
-      Shopping: "shopping",
       Leisure: "leisure"
     };
 
